@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohamed Houssein Farah — Portfolio</title>
+  <meta name="description" content="Portfolio de Mohamed Houssein Farah — Réseaux & Sécurité Informatique" />
+  <style>
+    :root{
+      --bg:#0b0f14; /* very dark */
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent1:#14b8f6; /* cyan */
+      --accent2:#06b6a4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(6,182,160,0.06), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(20,184,246,0.05), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--accent1); text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter: blur(6px);z-index:40}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{margin-left:18px;font-weight:600;color:var(--muted)}
+
+    .container{max-width:1100px;margin:40px auto;padding:18px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .profile-pic{width:280px;height:280px;border-radius:18px;background:#081018;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.04)}
+    .profile-pic img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro h1{margin:0;font-size:28px}
+    .intro p{color:var(--muted);margin-top:8px;line-height:1.5}
+    .chips{display:flex;gap:8px;margin-top:14px}
+    .chip{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:600;color:var(--muted)}
+
+    /* sections */
+    section{margin-top:30px}
+    h2{margin:0 0 16px 0;font-size:20px;color:#dff7ff}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Projects */
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .project small{color:var(--muted)}
+    .project p{color:var(--muted);margin-top:8px}
+    .project .tags{display:flex;gap:8px;margin-top:10px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    /* Certifications */
+    .cert-list{display:flex;flex-wrap:wrap;gap:10px}
+    .cert{background:linear-gradient(90deg, rgba(9,12,15,0.6), rgba(255,255,255,0.02));padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* contact */
+    .contact-card{display:flex;flex-direction:column;gap:10px}
+    .contact-row{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#012028;font-weight:700;border:0}
+
+    footer{margin:40px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .profile-pic{width:220px;height:220px;margin:0 auto}
+      .grid-2{grid-template-columns:1fr}
+    }
+
+    /* subtle animations */
+    .fade-up{transform:translateY(8px);opacity:0;animation:up 0.7s forwards}
+    @keyframes up{to{transform:none;opacity:1}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">MHF</div>
+      <div>
+        <div style="font-weight:800">Mohamed H. Farah</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Réseaux & Sécurité Informatique</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card profile-card fade-up">
+        <!-- AVATAR: replace assets/avatar-male-pro.png with your real photo later -->
+        <div class="profile-pic">
+          <img src="assets/med.png" alt="Mohamed Houssein Farah"></div>
+        <div style="margin-top:14px;color:var(--muted);font-size:13px">Balbala, Djibouti • Né le 18 juillet 2000</div>
+      </div>
+
+      <div class="card intro fade-up">
+        <h1>Bonjour — je suis Mohamed,</h1>
+        <p>Jeune diplômé en <strong>Réseaux & Sécurité Informatique</strong>. J'aide les organisations à sécuriser leurs infrastructures (IDS/IPS, segmentation VLAN, AD,) et à déployer des architectures réseau solides et maintenables.</p>
+
+        <div class="chips">
+          <div class="chip">CCNA</div>
+          <div class="chip">Windows Server</div>
+          <div class="chip">Snort & pfSense</div>
+          <div class="chip">Linux</div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <a class="btn" href="mailto:aminhoussein501@gmail.com">Me contacter</a>
+          <a style="padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);font-weight:700;color:var(--muted)" href="https://www.linkedin.com/in/mohamed-houssein-farah" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="fade-up card">
+      <h2>À propos</h2>
+      <div class="grid-2">
+        <div>
+          <p style="color:var(--muted)">Jeune diplômé spécialisé dans la protection et l’optimisation des infrastructures IT. J’ai mené des projets concrets : déploiement d’un IDS/IPS (Snort + pfSense), segmentation par VLANs, mise en place d’Active Directory.</p>
+
+          <h3 style="margin-top:12px;color:#cfeefb">Compétences clés</h3>
+          <ul style="color:var(--muted);line-height:1.8">
+            <li>Conception & Administration réseau (VLANs, routage, firewall)</li>
+            <li>IDS/IPS & détection d’intrusion (Snort, Zenmap)</li>
+            <li>Windows Server & Active Directory (GPO)</li>
+            <li> HTML Essentiel</li>
+            <li>Administration Linux & scripting de base</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color:#cfeefb">Langues</h3>
+          <p style="color:var(--muted)">Somali, Français, Anglais, Arabe, Turc</p>
+
+          <h3 style="margin-top:12px;color:#cfeefb">Qualités</h3>
+          <p style="color:var(--muted)">Curiosité, rigueur, esprit d’équipe, sens de l’organisation, résolution de problèmes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-up">
+      <h2>Projets</h2>
+      <div class="grid-2">
+        <div class="project">
+          <small>IDS/IPS — Snort & pfSense</small>
+          <h3 style="margin:6px 0">Détection et prévention d’intrusions</h3>
+          <p>Conception et déploiement d’un IDS/IPS local avec règles Snort, intégration à pfSense pour la prévention. Simulation d’attaques avec Nmap/Zenmap et ajustement des signatures pour réduire les faux positifs.</p>
+          <div class="tags"><span class="tag">Snort</span><span class="tag">pfSense</span><span class="tag">Nmap</span></div>
+        </div>
+
+        <div class="project">
+          <small>Réseau d’entreprise — VLANs & Active Directory</small>
+          <h3 style="margin:6px 0">Segmentation & gestion centralisée</h3>
+          <p>Déploiement d’un réseau avec VLANs, configuration d’un routeur en mode Router-on-a-Stick, création d’un domaine Active Directory, politiques GPO pour sécuriser les postes clients.</p>
+          <div class="tags"><span class="tag">VLAN</span><span class="tag">Active Directory</span><span class="tag">GPO</span></div>
+        </div>
+        <div class="project">
+          <small>Projet réseau PME (clé en main)</small>
+          <h3 style="margin:6px 0">Architecture sécurisée pour PME</h3>
+          <p>Conception d’une architecture réseau complète incluant firewall, segmentation, Wi‑Fi visiteurs, QoS et services de base (DNS, DHCP). </p>
+          <div class="tags"><span class="tag">Security</span><span class="tag">Design</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="fade-up card">
+      <h2>Certifications & Formations</h2>
+      <div class="cert-list">
+        <div class="cert">CCNA (200-301) — 2024</div>
+        <div class="cert">Windows Server 2019 — 2024</div>
+        <div class="cert">Introduction to Cybersecurity — 2025</div>
+        <div class="cert">HTML — 2025</div>
+        <div class="cert">ISO 20000 (Principles ITSM) — 2025</div>
+        <div class="cert">Networking Basics Certificate — 2025</div>
+        <div class="cert">Network Addressing and Basics 
+Troubleshooting — 2025</div>
+      </div>
+
+      
+    </section>
+
+    <section id="contact" class="fade-up card">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="contact-card">
+          <div class="contact-row"><strong>Email:</strong><span style="color:var(--muted)">aminhoussein501@gmail.com</span></div>
+          <div class="contact-row"><strong>Téléphone:</strong><span style="color:var(--muted)">+253 77 437 274/ +253 77 862 140</span></div>
+          <div class="contact-row"><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/mohamed-houssein-farah" target="_blank">mohamed-houssein-farah</a></div>
+          <div style="margin-top:12px"><a class="btn" href="mailto:aminhoussein501@gmail.com">Envoyer un email</a></div>
+        </div>
+
+        <div style="color:var(--muted)">
+          <p>Pour un entretien, je peux présenter mes projets en détail (diagrammes réseau, captures de règles Snort...)</p>
+           </div>
+      </div>
+    </section>
+
+    <footer>
+      © Mohamed H. Farah — Réseaux & Sécurité • Disponible pour opportunités • Djibouti
+    </footer>
+  </main>
+
+</body>
+</html>
+
